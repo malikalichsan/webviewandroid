@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
     WebView webView;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         webView = (WebView)findViewById(R.id.webview );
         webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
         // webView.loadData("<html><p>This is <strong>webview</strong></p></html>", "text/html", "UTF-8");
         webView.loadUrl("https://stackoverflow.com/");
     }
