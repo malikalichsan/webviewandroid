@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        // webView.loadData("<html><p>This is <strong>webview</strong></p></html>", "text/html", "UTF-8");
         webView.loadUrl("https://stackoverflow.com/");
     }
 }
